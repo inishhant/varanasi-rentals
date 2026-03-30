@@ -9,8 +9,6 @@ export default function Home() {
   return (
     <>
 
-      <Navbar/>
-
       <HeroCarousel/>
 
       <FeaturedBikes/>
@@ -18,8 +16,6 @@ export default function Home() {
       <AboutSection/>
 
       <Reviews/>
-
-      <Footer/>
 
     </>
   )

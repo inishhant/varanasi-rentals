@@ -4,38 +4,11 @@ import { useState } from "react"
 import { Swiper, SwiperSlide } from "swiper/react"
 import { Navigation } from "swiper/modules"
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa"
+import {bikes} from "@/data/bikes"
 
 import "swiper/css"
 
 import BikeCard from "./BikeCard"
-
-const bikes = [
-  {
-    name: "Royal Enfield Meteor 350",
-    price: 1200,
-    image: "/images/bike1.png"
-  },
-  {
-    name: "Honda Activa",
-    price: 500,
-    image: "/images/bike2.png"
-  },
-  {
-    name: "Royal Enfield Classic 350",
-    price: 1100,
-    image: "/images/bike3.png"
-  },
-  {
-    name: "Honda Activa",
-    price: 500,
-    image: "/images/bike2.png"
-  },
-  {
-    name: "Yamaha R15",
-    price: 900,
-    image: "/images/bike3.png"
-  }
-]
 
 export default function FeaturedBikes() {
 

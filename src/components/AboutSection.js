@@ -1,8 +1,8 @@
 export default function AboutSection() {
   return (
-    <section className="py-20 px-10 text-center">
+    <section className="py-20 px-10 text-center bg-black">
 
-      <h2 className="text-3xl font-bold mb-6">
+      <h2 className="text-3xl font-bold mb-6 text-white">
         About Kashi Ride Rentals
       </h2>
 

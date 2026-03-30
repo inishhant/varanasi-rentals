@@ -1,20 +1,35 @@
+import Link from "next/link"
+
 export default function BikeCard({ bike }) {
   return (
     <div className="border border-gray-200 rounded-xl p-4 shadow transition-all duration-300 hover:border-temple hover:shadow-lg">
 
-      <img src={bike.image} className="rounded" />
+      {/* Bike Details Link */}
+      <Link href={`/bikes/${bike.id}`}>
 
-      <h2 className="text-xl text-black font-bold mt-2">
-        {bike.name}
-      </h2>
+        <img
+          src={bike.image}
+          className="rounded-lg w-full h-48 object-cover"
+        />
 
-      <p className="text-ganga">
-        ₹{bike.price}/day
-      </p>
+        <h2 className="text-xl text-black font-bold mt-3">
+          {bike.name}
+        </h2>
 
-      <button className="mt-2 bg-temple text-white px-4 py-2 rounded transition-all duration-300 hover:bg-orange-600 hover:shadow-md">
-        Book Now
-      </button>
+        <p className="text-ganga">
+          ₹{bike.price}/day
+        </p>
+
+      </Link>
+
+      {/* Booking Button */}
+      <Link href={`/bookMyRide?bike=${bike.id}`}>
+
+        <button className="mt-3 bg-temple text-white px-4 py-2 rounded transition-all duration-300 hover:bg-orange-600 hover:shadow-md">
+          Book Now
+        </button>
+
+      </Link>
 
     </div>
   )

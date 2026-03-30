@@ -78,7 +78,7 @@ export default function HeroCarousel() {
                 </p>
 
                 <button className="mt-6 bg-temple hover:bg-orange-600 px-6 py-3 rounded-lg font-semibold transition">
-                    <Link href="/booking">Book Your Ride</Link>
+                    <Link href="/bookMyRide">Book Your Ride</Link>
                 </button>
 
               </div>

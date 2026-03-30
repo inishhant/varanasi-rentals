@@ -2,20 +2,25 @@ import Link from "next/link"
 
 export default function Navbar() {
   return (
-    <nav className="bg-temple text-white px-8 py-4 flex items-center justify-between sticky top-0 z-50 shadow-md">
+    <nav className="bg-gradient-to-r from-temple to-orange-500 text-white px-8 flex items-center justify-between sticky top-0 z-50 shadow-md">
 
       {/* Logo + Brand */}
-      <div className="relative flex items-center">
+      <div className="relative flex items-center w-[272px]">
 
         <img 
           src="/images/KRR.png"
           alt="Kashi Ride Rentals"
-          className="h-20 object-contain"
+          className="h-16 object-contain"
         />
 
-        <h1 className="absolute right-0 font-bold text-xl">
-          Kashi Ride Rentals
-        </h1>
+        <div className="flex absolute right-0">
+          <h1 className="font-bold text-xl text-orange">
+            Kashi
+          </h1>
+          <h1 className="font-bold text-xl text-ganga">
+            RideRentals
+          </h1>
+        </div>
 
       </div>
 
@@ -37,10 +42,24 @@ export default function Navbar() {
         </Link>
 
         <Link 
-          href="/booking" 
+          href="/bookMyRide" 
           className="hover:text-orange-300 transition-colors duration-200"
         >
-          Booking
+          BookMyRide
+        </Link>
+
+        <Link 
+          href="/blog" 
+          className="hover:text-orange-300 transition-colors duration-200"
+        >
+          Blog
+        </Link>
+
+        <Link 
+          href="/contact" 
+          className="hover:text-orange-300 transition-colors duration-200"
+        >
+          Contact Us
         </Link>
 
         <Link 

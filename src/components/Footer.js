@@ -5,7 +5,7 @@ import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa"
 
 export default function Footer() {
   return (
-    <footer className="bg-temple text-white">
+    <footer className="bg-gradient-to-r from-temple to-orange-500 text-white">
 
       <div className="max-w-7xl mx-auto px-6 py-12 grid md:grid-cols-4 gap-8">
 
