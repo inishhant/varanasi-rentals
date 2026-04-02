@@ -59,27 +59,29 @@ export default function HeroCarousel() {
           <SwiperSlide key={i}>
 
             <div
-              className="h-[80vh] bg-cover bg-center relative flex items-center justify-center"
+              className="h-[80vh] bg-cover bg-center relative flex items-end justify-start pb-20 pl-8 md:pl-24"
               style={{ backgroundImage: `url(${slide.img})` }}
             >
 
               {/* overlay */}
-              <div className="absolute inset-0 bg-black/60"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
 
               {/* content */}
-              <div className="relative text-white text-center px-6">
+              <div className="relative z-10 text-left max-w-2xl transform transition-all mb-4 md:mb-8 pb-4">
 
-                <h1 className="text-4xl md:text-6xl font-bold">
+                <h1 className="text-2xl md:text-4xl lg:text-5xl font-black tracking-tight mb-2 drop-shadow-[0_4px_4px_rgba(0,0,0,0.8)] text-white">
                   {slide.title}
                 </h1>
 
-                <p className="mt-4 text-lg md:text-xl">
+                <p className="text-sm md:text-base font-medium text-gray-200 drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)] mb-6 max-w-lg leading-relaxed">
                   {slide.subtitle}
                 </p>
 
-                <button className="mt-6 bg-temple hover:bg-orange-600 px-6 py-3 rounded-lg font-semibold transition">
-                    <Link href="/bookMyRide">Book Your Ride</Link>
-                </button>
+                <Link href="/bookMyRide">
+                  <button className="bg-primaryDark text-white font-bold px-6 py-2.5 rounded-full transition-all duration-300 hover:bg-primary hover:text-gray-900 shadow-lg hover:scale-105 hover:shadow-primary/50 text-sm md:text-base tracking-wide border-2 border-transparent hover:border-white/50">
+                    Book Your Ride Now
+                  </button>
+                </Link>
 
               </div>
 

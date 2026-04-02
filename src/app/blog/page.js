@@ -25,7 +25,7 @@ export default function BlogPage() {
   return (
     <>
       {/* HERO */}
-      <div className="bg-gradient-to-r from-temple to-orange-500 text-white py-16 text-center">
+      <div className="bg-gradient-to-r from-primaryDark to-primary text-gray-900 py-16 text-center">
         <h1 className="text-4xl md:text-5xl font-bold">
           Kashi Travel Blogs
         </h1>
@@ -40,7 +40,7 @@ export default function BlogPage() {
         {blogs.map((blog) => (
           <div
             key={blog.id}
-            className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300 border hover:border-temple"
+            className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300 border hover:border-primaryDark"
           >
 
             <img
@@ -50,7 +50,7 @@ export default function BlogPage() {
 
             <div className="p-5">
 
-              <h2 className="text-xl font-bold text-black">
+              <h2 className="text-xl font-bold text-gray-900">
                 {blog.title}
               </h2>
 
@@ -59,7 +59,7 @@ export default function BlogPage() {
               </p>
 
               <Link href={`/blog/${blog.id}`}>
-                <button className="mt-4 bg-temple text-white px-4 py-2 rounded hover:bg-orange-600 transition">
+                <button className="mt-4 bg-primaryDark text-white px-4 py-2 rounded hover:bg-primary hover:text-gray-900 transition">
                   Read More
                 </button>
               </Link>

@@ -7,9 +7,9 @@ export default function Bikes() {
     <>
       {/* <Layout> */}
         {/* Hero Header */}
-        <div className="bg-gray-100 py-16 text-center">
+        <div className="bg-bgSubtle py-16 text-center">
 
-          <h1 className="text-4xl font-bold text-black">
+          <h1 className="text-4xl font-bold text-gray-900">
             Choose Your Ride
           </h1>
 
@@ -29,15 +29,15 @@ export default function Bikes() {
               type="text"
               placeholder="Search bikes..."
               className="w-full md:w-3/5 px-4 py-2 rounded-lg border border-gray-300 
-              focus:outline-none focus:ring-2 focus:ring-temple focus:border-temple 
-              text-black placeholder-gray-400 transition"
+              focus:outline-none focus:ring-2 focus:ring-primaryDark focus:border-primaryDark 
+              text-gray-900 placeholder-gray-400 transition"
             />
 
             {/* Category */}
             <select
               className="w-full md:w-1/5 px-4 py-2 rounded-lg border border-gray-300 
-              focus:outline-none focus:ring-2 focus:ring-temple focus:border-temple 
-              text-black bg-white transition"
+              focus:outline-none focus:ring-2 focus:ring-primaryDark focus:border-primaryDark 
+              text-gray-900 bg-white transition"
             >
               <option>All Bikes</option>
               <option>Scooter</option>
@@ -48,8 +48,8 @@ export default function Bikes() {
             {/* Price Sort */}
             <select
               className="w-full md:w-1/5 px-4 py-2 rounded-lg border border-gray-300 
-              focus:outline-none focus:ring-2 focus:ring-temple focus:border-temple 
-              text-black bg-white transition"
+              focus:outline-none focus:ring-2 focus:ring-primaryDark focus:border-primaryDark 
+              text-gray-900 bg-white transition"
             >
               <option>Price</option>
               <option>Low → High</option>

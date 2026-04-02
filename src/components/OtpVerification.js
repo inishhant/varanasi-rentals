@@ -33,7 +33,7 @@ export default function OtpVerification({ email }) {
     setOtp(newOtp)
 
     // move forward
-    if (value && index < 5) {
+    if (value && index < 5 && inputs.current[index + 1]) {
       inputs.current[index + 1].focus()
     }
 
@@ -45,7 +45,7 @@ export default function OtpVerification({ email }) {
 
   // ⬅️ Backspace
   const handleKeyDown = (e, index) => {
-    if (e.key === "Backspace" && !otp[index] && index > 0) {
+    if (e.key === "Backspace" && !otp[index] && index > 0 && inputs.current[index - 1]) {
       inputs.current[index - 1].focus()
     }
   }
@@ -59,7 +59,9 @@ export default function OtpVerification({ email }) {
     const newOtp = pasteData.split("")
     setOtp(newOtp)
 
-    inputs.current[5].focus()
+    if (inputs.current[5]) {
+       inputs.current[5].focus()
+    }
 
     verifyOtp(pasteData)
   }
@@ -119,7 +121,7 @@ export default function OtpVerification({ email }) {
 
     <div className="flex flex-col items-center justify-center min-h-[70vh]">
 
-      <h2 className="text-3xl font-bold text-black mb-2">
+      <h2 className="text-3xl font-bold text-gray-900 mb-2">
         Verify OTP
       </h2>
 
@@ -153,9 +155,9 @@ export default function OtpVerification({ email }) {
               border
               rounded-lg
               border-gray-300
-              focus:border-temple
+              focus:border-primaryDark
               focus:ring-2
-              focus:ring-temple/30
+              focus:ring-primaryDark/30
               outline-none
               transition
             "
@@ -167,7 +169,7 @@ export default function OtpVerification({ email }) {
 
       {/* Loader */}
       {loading && (
-        <div className="mt-4 w-6 h-6 border-2 border-orange-200 border-t-temple rounded-full animate-spin"></div>
+        <div className="mt-4 w-6 h-6 border-2 border-primaryLight border-t-primaryDark rounded-full animate-spin"></div>
       )}
 
       {/* Resend */}
@@ -178,7 +180,7 @@ export default function OtpVerification({ email }) {
         ) : (
           <button
             onClick={resendOtp}
-            className="text-temple font-semibold hover:underline"
+            className="text-primaryDark font-semibold hover:underline"
           >
             Resend OTP
           </button>

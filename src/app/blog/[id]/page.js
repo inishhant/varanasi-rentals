@@ -13,9 +13,9 @@ const blogContent = {
   }
 }
 
-export default function BlogDetails({ params }) {
-
-  const blog = blogContent[params.id]
+export default async function BlogDetails({ params }) {
+  const { id } = await params
+  const blog = blogContent[id]
 
   if (!blog) {
     return <div className="p-10">Blog not found</div>
@@ -25,11 +25,11 @@ export default function BlogDetails({ params }) {
     <>
       <div className="max-w-4xl mx-auto px-6 py-16">
 
-        <h1 className="text-4xl font-bold text-black mb-6">
+        <h1 className="text-4xl font-bold text-gray-900 mb-6">
           {blog.title}
         </h1>
 
-        <p className="text-gray-700 leading-7">
+        <p className="text-gray-800 leading-7">
           {blog.content}
         </p>
 

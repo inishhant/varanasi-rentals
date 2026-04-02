@@ -23,11 +23,11 @@ export default function BikeDetails({bike, bookButton}) {
             {/* Bike Info */}
             <div>
 
-            <h1 className="text-4xl font-bold text-black">
+            <h1 className="text-4xl font-bold text-gray-900">
                 {bike.name}
             </h1>
 
-            <p className="text-2xl text-temple font-semibold mt-2">
+            <p className="text-2xl text-primaryDark font-semibold mt-2">
                 ₹{bike.price} / day
             </p>
 
@@ -41,7 +41,7 @@ export default function BikeDetails({bike, bookButton}) {
 
             {bookButton && 
                 <Link href={`/bookMyRide?bike=${bike.id}`}>
-                    <button className="mt-8 bg-temple text-white px-6 py-3 rounded-lg hover:bg-orange-600 transition">
+                    <button className="mt-8 bg-primaryDark text-white px-6 py-3 rounded-lg hover:bg-primary hover:text-gray-900 transition">
                         Book This Bike
                     </button>
                 </Link>

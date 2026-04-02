@@ -15,9 +15,9 @@ export default function FeaturedBikes() {
   const [swiperRef, setSwiperRef] = useState(null)
 
   return (
-    <section className="py-12 px-10 bg-gray-50 relative overflow-visible">
+    <section className="py-12 px-10 bg-bgSubtle relative overflow-visible">
 
-      <h2 className="text-3xl font-bold text-center mb-10 text-black">
+      <h2 className="text-3xl font-bold text-center mb-10 text-gray-900">
         Popular Bikes
       </h2>
 
@@ -47,7 +47,7 @@ export default function FeaturedBikes() {
       {/* PREV BUTTON */}
       <button
         onClick={() => swiperRef?.slidePrev()}
-        className="absolute left-2 top-1/2 -translate-y-1/2 z-10 bg-gray-200 hover:bg-gray-400 text-white p-3 rounded-full backdrop-blur"
+        className="absolute left-2 top-1/2 -translate-y-1/2 z-10 bg-primaryDark hover:bg-primary text-white p-3 rounded-full backdrop-blur transition-colors"
       >
         <FaChevronLeft />
       </button>
@@ -55,7 +55,7 @@ export default function FeaturedBikes() {
       {/* NEXT BUTTON */}
       <button
         onClick={() => swiperRef?.slideNext()}
-        className="absolute right-2 top-1/2 -translate-y-1/2 z-10 bg-gray-200 hover:bg-gray-400 text-white p-3 rounded-full backdrop-blur"
+        className="absolute right-2 top-1/2 -translate-y-1/2 z-10 bg-primaryDark hover:bg-primary text-white p-3 rounded-full backdrop-blur transition-colors"
       >
         <FaChevronRight />
       </button>

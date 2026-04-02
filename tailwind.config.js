@@ -3,9 +3,12 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        ganga: "#ff9933",
-        temple: "#7a0c0c",
-        sand: "#f5e6ca"
+        primaryDark: "#84B179",
+        primary: "#A2CB8B",
+        primaryLight: "#C7EABB",
+        accentLime: "#E8F5BD",
+        bgSubtle: "#ECEEDF",
+        accentBlue: "#BBDCE5"
       }
     }
   },

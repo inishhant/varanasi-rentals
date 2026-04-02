@@ -49,11 +49,12 @@ export default function Booking() {
     if(bikeId){
       const foundBike = bikes.find((b) => b.id === bikeId)
       setBike(foundBike)
+      setForm(prev => ({...prev, bike: bikeId}))
   
       // remove query param
-      router.replace("/bookMyRide")
+      router.replace("/bookMyRide", { scroll: false })
     }
-  },[])
+  },[bikeId, router])
 
   const handleSubmit = async (e) => {
     e.preventDefault()
@@ -116,9 +117,9 @@ export default function Booking() {
 
               <select
                 name="bike"
-                className="border p-3 rounded-lg hover:border-temple"
+                className="border p-3 rounded-lg hover:border-primaryDark"
                 onChange={handleChange}
-                value={bike?.id}
+                value={form?.bike || bike?.id || ""}
               >
                 <option value="">Select Bike</option>
                 {bikes.map((bike, i) => (
@@ -131,7 +132,7 @@ export default function Booking() {
                 placeholder="Full Name"
                 required
                 onChange={handleChange}
-                className="border p-3 rounded-lg hover:border-temple"
+                className="border p-3 rounded-lg hover:border-primaryDark"
               />
 
               <input
@@ -140,7 +141,7 @@ export default function Booking() {
                 placeholder="Email"
                 required
                 onChange={handleChange}
-                className="border p-3 rounded-lg hover:border-temple"
+                className="border p-3 rounded-lg hover:border-primaryDark"
               />
 
               <input
@@ -148,7 +149,7 @@ export default function Booking() {
                 placeholder="Phone Number"
                 required
                 onChange={handleChange}
-                className="border p-3 rounded-lg hover:border-temple"
+                className="border p-3 rounded-lg hover:border-primaryDark"
               />
 
               <div className="grid grid-cols-2 gap-4">
@@ -158,7 +159,7 @@ export default function Booking() {
                   name="pickupDate"
                   required
                   onChange={handleChange}
-                  className="border p-3 rounded-lg hover:border-temple"
+                  className="border p-3 rounded-lg hover:border-primaryDark"
                 />
 
                 <input
@@ -166,7 +167,7 @@ export default function Booking() {
                   name="returnDate"
                   required
                   onChange={handleChange}
-                  className="border p-3 rounded-lg hover:border-temple"
+                  className="border p-3 rounded-lg hover:border-primaryDark"
                 />
 
               </div>
@@ -175,7 +176,7 @@ export default function Booking() {
                 name="location"
                 required
                 onChange={handleChange}
-                className="border p-3 rounded-lg hover:border-temple"
+                className="border p-3 rounded-lg hover:border-primaryDark"
               >
                 <option value="">Pickup Location</option>
                 <option>Assi Ghat</option>
@@ -187,7 +188,7 @@ export default function Booking() {
                 name="idType"
                 required
                 onChange={handleChange}
-                className="border p-3 rounded-lg hover:border-temple"
+                className="border p-3 rounded-lg hover:border-primaryDark"
               >
                 <option value="">ID Proof</option>
                 <option>Aadhar Card</option>
@@ -200,7 +201,7 @@ export default function Booking() {
                 placeholder="ID Number"
                 required
                 onChange={handleChange}
-                className="border p-3 rounded-lg hover:border-temple"
+                className="border p-3 rounded-lg hover:border-primaryDark"
               />
 
               <label className="flex items-center gap-2">
@@ -213,7 +214,7 @@ export default function Booking() {
               </label>
 
               <button
-                className="bg-temple text-white p-3 rounded-lg hover:bg-orange-600"
+                className="bg-primaryDark text-gray-900 p-3 rounded-lg hover:bg-primary"
               >
                 Confirm Booking
               </button>
